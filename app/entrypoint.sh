@@ -40,10 +40,6 @@ xvfb_pid=$!
 ) >/tmp/x11vnc.log 2>&1 &
 x11vnc_pid=$!
 
-(
-  _forever
-) >/tmp/chocolate-doom.log 2>&1 &
-
 if [ "${WSDOOM_RESET_ON_DISCONNECT:-}" = "yes" ]; then
   cp /app/websockify-exit-on-disconnect.js /opt/websockify-js/websockify/websockify.js
 fi
