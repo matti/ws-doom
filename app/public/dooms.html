@@ -1,0 +1,13 @@
+<body></body>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  let amount = urlParams.get('amount') || 3
+  console.log(amount)
+
+  for (let i=0; i<amount; i++) {
+    let iframe = document.createElement("iframe");
+    iframe.src = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
+    document.body.appendChild(iframe)
+  }
+</script>
