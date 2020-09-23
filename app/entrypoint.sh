@@ -52,7 +52,7 @@ fi
     chocolate_doom_pid=$!
 
     (
-      node /opt/websockify-js/websockify/websockify.js  --web /app/public :8080 127.0.0.1:5900
+      node /opt/websockify-js/websockify/websockify.js  --web /app/public ":$PORT" 127.0.0.1:5900
     ) >/tmp/websockify.js 2>&1 &
     websockify_pid=$!
 
