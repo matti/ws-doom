@@ -12,9 +12,9 @@ jobs:
         with:
           username: mattipaksula
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: mattipaksula/wsdoom
+          repository: mattipaksula/ws-doom
           tag_with_ref: true
           tag_with_sha: true
-          cache_froms: mattipaksula/wsdoom:latest
+          cache_froms: mattipaksula/ws-doom:latest
         env:
           DOCKER_BUILDKIT: 1
